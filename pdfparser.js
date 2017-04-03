@@ -139,9 +139,6 @@ let PDFParser = (function () {
 			this.PDFJS.tryLoadFieldInfoXML(pdfFilePath);
 		}
 
-		if (_processBinaryCache.call(this))
-			return;
-
 		this.fq.push({path: pdfFilePath}, _processPDFContent.bind(this));
 	};
 
